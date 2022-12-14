@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: OpenSans-reg;
+}
+
+body {
+  margin: 0;
+  background-color: $clr2;
+  color: $clr6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1em;
+  font-family: Raleway-bold, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Dont stretch my Media */
+img,
+embed,
+video,
+object,
+iframe {
+  max-width: 100%;
+}
+
+/* tap targets: */
+nav a,
+button {
+  min-width: 48px;
+  min-height: 48px;
+  font-family: OpenSans-reg;
+  color: $clr6;
+  cursor: pointer;
+}
+
+/* Simple and useful CSS Debugging Technique */
+.debug * {
+  outline: 1px solid gold;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+button,
+.btn {
+  // @include btn;
+  // &-dark {
+  //   @include btn($type: dark);
+  // }
+
+  // &-light {
+  //   @include btn($type: light);
+  // }
+}

@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  
+  input {
+    padding: 1em;
+  }
+}
+
+.form-control {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  label {
+    flex-basis: 100px;
+  }
+}

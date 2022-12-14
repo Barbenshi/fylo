@@ -1,0 +1,12 @@
+.toy-preview {
+  border-radius: 2em;
+  padding: 20px;
+
+  .btn-group {
+    > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

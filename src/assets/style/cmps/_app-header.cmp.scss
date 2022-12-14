@@ -1,0 +1,21 @@
+header.main-header {
+  padding-block: em(73px);
+
+  nav {
+    ul {
+        li{
+            a{
+                font-family: Raleway-reg;
+            }
+        }
+      li:not(:last-of-type) {
+        padding-inline-end: em(58px);
+      }
+    }
+    > * {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.main-content{
+    display: grid;
+    grid-template-areas:
+    ". access-img access-img security-img security-img ." 
+    ". realtime-img realtime-img store-img store-img ."
+    "main-img main-img main-img description description description"
+    "left-review left-review mid-review mid-review right-review right-review"
+    ;
+    gap: 40px 97px;
+    @include for-mobile-layout{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .tl{
+        grid-area: access-img;
+    }
+    .tr{
+        grid-area:security-img;
+    }
+    .bl{
+        grid-area: realtime-img;
+    }
+    .br{
+        grid-area: store-img;
+    }
+    .main-img-container{
+        grid-area: main-img;
+        justify-self: center;
+    }
+    .img-description{
+        grid-area:description;
+        h1{
+            font-size: 40px;
+        }
+        a{
+            color: $secondary-clr1;
+            text-decoration: underline;
+        }
+    }
+    .first-review{
+        grid-area:left-review
+    }
+    .second-review{
+        grid-area:mid-review
+    }
+    .third-review{
+        grid-area:right-review
+    }
+    .tl,.tr,.bl,.br{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-inline: 77px;
+    }
+    .review{
+        position: relative;
+        z-index: 20;
+        .quotes-container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        background-color: $clr3;
+        padding: 40px 25px;
+        border-radius: em(4px);
+        box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.1);
+        margin-top: 180px;
+        margin-bottom: 370px;
+        .user-container{
+            .user-img{
+                
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                overflow: hidden;
+                img{
+                    // object-fit: cover;
+                }
+            }
+        }
+    }
+}

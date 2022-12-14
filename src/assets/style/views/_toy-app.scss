@@ -1,0 +1,18 @@
+.app-container {
+  .toy-app{
+    gap: 10px;
+  }
+
+  div.el-skeleton {
+    display: flex;
+    width: auto;
+  }
+
+  div.el-skeleton > * {
+    flex-basis: 250px;
+  }
+
+  div.el-skeleton.is-animated {
+    width: 100vw;
+  }
+}
