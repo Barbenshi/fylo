@@ -5,6 +5,7 @@
     ". realtime-img realtime-img store-img store-img ."
     "main-img main-img main-img description description description"
     "left-review left-review mid-review mid-review right-review right-review"
+    ". contact contact contact contact ." 
     ;
     gap: 40px 97px;
     @include for-mobile-layout{
@@ -28,6 +29,9 @@
     .main-img-container{
         grid-area: main-img;
         justify-self: center;
+        @include for-mobile-layout{
+            width: 304px;
+        }
     }
     .img-description{
         grid-area:description;
@@ -40,7 +44,10 @@
         }
     }
     .first-review{
-        grid-area:left-review
+        grid-area:left-review;
+        // background-image: url('src/assets/images/bg-quotes.png');
+        // background-repeat: no-repeat;
+        // position: absolute;
     }
     .second-review{
         grid-area:mid-review
@@ -56,7 +63,13 @@
         text-align: center;
         padding-inline: 77px;
     }
+    .quotes-img{
+        grid-area: left-review;
+        transform: translateY(18%);
+        transform: translate(-9px, 145px);
+    }
     .review{
+
         position: relative;
         z-index: 20;
         .quotes-container{
@@ -71,6 +84,9 @@
         box-shadow: 5px 5px 8px 4px rgba(56, 56, 56, 0.1);
         margin-top: 180px;
         margin-bottom: 370px;
+        @include for-mobile-layout{
+            margin: 0;
+        }
         .user-container{
             .user-img{
                 
@@ -81,6 +97,58 @@
                 img{
                     // object-fit: cover;
                 }
+            }
+        }
+    }
+    .contact-form{
+        @include for-mobile-layout{
+            width: 330px;
+            padding: 40px 28px;
+        }
+        text-align: center;
+        grid-area: contact;
+        background-color: $clr4;
+        transform: translateY(50%);
+        padding: 42px 77px;
+        h1{
+            font-size: 2rem;
+            font-family: Raleway-bold;
+        }
+        p{
+            font-size: 14px;
+        }
+        .input-container{
+            @include for-mobile-layout{
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            input{
+                min-width: 480px;
+                min-height: 48px;
+                box-shadow: 2px 3px 6px rgba(7, 4, 59, 0.16);
+                border-radius: 24px;
+                padding-inline-start: 38px;
+                &::placeholder{
+                    color: $clr5;
+                }
+                @include for-mobile-layout{
+                min-width: 280px;
+                // padding-inline-start: 0;
+                }
+            }
+            button{
+                background-image: linear-gradient(152deg, #63e1d9 0%, #34a0cd 100%);
+                border-radius: 24px;
+                box-shadow: 2px 3px 6px rgba(7, 4, 59, 0.16);
+                font-family: Raleway-bold;
+                padding: 15px 26px;
+                margin-inline-start: 30px;
+                @include for-mobile-layout{
+                    margin-top: 24px;
+                    min-width: 280px;
+                    margin-inline-start: 0;
+                    }
             }
         }
     }

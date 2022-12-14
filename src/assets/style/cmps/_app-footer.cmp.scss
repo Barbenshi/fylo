@@ -3,11 +3,23 @@ footer{
     padding-top: 200px;
     padding-inline: 120px;
     padding-bottom: 97px;
+    @include for-mobile-layout{
+        padding: 0;
+
+        .content-container{
+            display: flex;
+            flex-direction: column;
+        }
+    }
     .footer-nav{
         ul{
             flex-wrap: wrap;
-            max-width: 300px;
-            max-height: 150px;
+            @include for-mobile-layout{
+                max-height: none;
+            }
+            margin: 0;
+            min-width: 200px;
+            max-height: 170px;
             li{
                 padding-bottom: 1rem;
             }
@@ -18,9 +30,15 @@ footer{
     }
     .logo{
         padding-bottom: 2rem;
+        @include for-mobile-layout{
+            padding-top: 280px;
+        }
     }
     p{
         max-width: 340px;
+    }
+    .location{
+        gap: 27px;
     }
     .contact-info{
         >*{
@@ -28,6 +46,31 @@ footer{
             &:first-of-type{
                 padding-bottom: em(20px);
             }
+        }
+    }
+    .social-links{
+        @include for-mobile-layout{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            padding-block: 100px;
+        }
+        padding-inline-start: 200px;
+        li,a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a.fa{
+            border-radius: 50%;
+            border: 1px solid $clr5;
+            // padding: 8px 12px;
+            width: 32px;
+            height: 31px;
+        }
+        li:not(:first-of-type){
+            padding-inline-start:11px
         }
     }
 }

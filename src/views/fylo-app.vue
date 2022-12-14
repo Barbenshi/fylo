@@ -1,11 +1,9 @@
 <template>
-  <div class="app-container">
-    <section class="toy-app container flex flex-column gap-1">
+    <section class="fylo-app container flex flex-column gap-1 full main-layout">
       <fylo-hero/>
       <main-content/>
       <!-- <toy-list  /> -->
     </section>
-  </div>
 </template>
 
 <script>

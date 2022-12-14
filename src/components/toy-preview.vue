@@ -8,7 +8,7 @@
         <div class="btn-group flex">
           <button  class="btn btn-info">details</button>
           <button class="btn btn-dark">edit</button>
-          <button  class="btn btn-light">delete</button>
+          <button  class="btn btn-light">deletee</button>
         </div>
   </li>
 </template>

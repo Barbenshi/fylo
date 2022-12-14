@@ -1,28 +1,9 @@
 <template>
     <section class='main-content'>
-        <div class="tl">
-            <img src="../assets/images/icon-access-anywhere.svg" alt="">
-            <h3>Access your files, anywhere</h3>
-            <p>The ability to use a smartphone, tablet, or computer to access your account means your files follow
-                you everywhere.</p>
-        </div>
-        <div class="tr">
-            <img src="../assets/images/icon-security.svg" alt="">
-            <h3>Security you can trust</h3>
-            <p>2-factor authentication and user-controlled encryption are just a couple of the security features we
-                allow to help secure your files.</p>
-        </div>
-        <div class="bl">
-            <img src="../assets/images/icon-collaboration.svg" alt="">
-            <h3>Real-time collaboration</h3>
-            <p>Securely share files and folders with friends, family and colleagues for live collaboration. No email
-                attachments required.</p>
-        </div>
-        <div class="br">
-            <img src="../assets/images/icon-any-file.svg" alt="">
-            <h3>Store any type of file</h3>
-            <p>Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all file
-                types to be securely stored and shared.</p>
+        <div v-for="feature in features" :key="feature.class" :class="feature.class">
+            <img :src="formatSrc(feature.path)" alt="">
+            <h3>{{feature.title}}</h3>
+            <p>{{feature.txt}}</p>
         </div>
         <div class="main-img-container">
             <img src="../assets/images/illustration-stay-productive.png" alt="">
@@ -36,10 +17,10 @@
                 attachments required.</p>
             <a href="">See how Fylo works <img src="../assets/images/icon-arrow.svg" alt=""></a>
         </div>
+        <div class="quotes-img">
+            <img src="../assets/images/bg-quotes.png" alt="">
+        </div>
         <div class="review first-review flex flex-column">
-            <div class="quotes-container">
-                <img src="../assets/images/bg-quotes.png" alt="" class="quotes">
-            </div>
             <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
                 become a well-oiled collaboration machine.</p>
             <div class="user-container flex">
@@ -78,18 +59,31 @@
                 </div>
             </div>
         </div>
+        <div class="contact-form">
+            <h1>Get early access today</h1>
+            <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+            <div class="input-container">
+                <input type="text" placeholder="email@example.com">
+                <button>Get Started For Free</button>
+            </div>
+        </div>
     </section>
 </template>
 <script>
 export default {
     name: 'main-content',
     props: {},
-    data() {
-        return {}
-    },
     created() { },
-    methods: {},
-    computed: {},
+    methods: {
+        formatSrc(path){
+            return `src/assets/images/icon-${path}.svg`
+        }
+    },
+    computed: {
+        features(){
+            return this.$store.getters.features
+        }
+    },
     components: {}
 }
 </script>

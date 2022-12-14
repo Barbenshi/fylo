@@ -1,14 +1,31 @@
 .hero{
     text-align: center;
+    background-color: $clr4;
+    background-image: url('src/assets/images/bg-curvy-desktop.svg');
+    background-position-y: 115%;
+    background-repeat: round;
+    background-repeat-y: no-repeat;
+
     .hero-img-container{
         width: 720px;
+        @include for-mobile-layout{
+            width: 304px;
+        }
         padding-bottom: 2rem;
     }
     h1{
         font-size: em(40px);
+        @include for-mobile-layout{
+            font-size: 24px;
+        }
+
     }
     p{
+
         font-size: em(20px);
+        @include for-mobile-layout{
+            font-size: em(14px);
+        }
         max-width: 590px;
         &:first-of-type{
             margin-bottom: 0;

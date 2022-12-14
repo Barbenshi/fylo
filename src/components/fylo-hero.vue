@@ -1,9 +1,9 @@
 <template>
-<section class='hero flex flex-column align-center justify-center'>
+<section class='hero flex flex-column align-center justify-center full'>
     <div class="hero-img-container">
         <img src="../assets/images/illustration-intro.png" alt="">
     </div>
-    <h1>
+    <h1 class="hero-title">
           All your files in one secure location, accessible anywhere.
         </h1>
         <p>Fylo stores all your most important files in one secure location.</p>
